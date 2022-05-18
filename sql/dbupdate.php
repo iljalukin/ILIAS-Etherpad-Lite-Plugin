@@ -269,7 +269,7 @@ foreach($sql as $s)
         include_once("./Services/UICore/exceptions/class.ilCtrlException.php");
         throw new ilCtrlException($e->getMessage());
     }
-    
+?>    
 <#14>
 <?php
 	$res = $ilDB->query("INSERT INTO `rep_robj_xpdl_adm_set` (epkey, epvalue) SELECT 'allow_read_only',true FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM rep_robj_xpdl_adm_set WHERE epkey = 'allow_read_only');");
